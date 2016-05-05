@@ -7,7 +7,6 @@ defmodule Foo.Sup do
 
   def init([]) do
     children = [
-      supervisor(Foo.Repo, []),
       worker(Foo.TestWorker, [])
     ]
 
