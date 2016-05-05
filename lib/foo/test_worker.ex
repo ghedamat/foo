@@ -14,7 +14,7 @@ defmodule Foo.TestWorker do
   end
 
   def handle_info(:work, state) do
-    Logger.debug "handle info 0.0.1"
+    Logger.debug "handle info 0.0.2"
     Process.send_after(self(), :work, 5000)
 
     {:noreply, state}
