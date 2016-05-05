@@ -9,6 +9,7 @@ defmodule Foo do
     children = [
       # Start the endpoint when the application starts
       supervisor(Foo.Endpoint, []),
+      supervisor(Foo.Repo, []),
       supervisor(Foo.Sup, [])
       # Start the Ecto repository
       # Here you could define other workers and supervisors as children
